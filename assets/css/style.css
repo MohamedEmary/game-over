@@ -1,0 +1,35 @@
+:root {
+  --blue-links: #0099cc;
+}
+
+body {
+  background-color: #262b30;
+}
+
+.img-wrapper {
+  background-image: url(../images/wrapper.png);
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+}
+
+nav {
+  background-color: #3a497a;
+  margin-top: 120px !important;
+}
+
+nav {
+  font-family: cursive, "Comic Sans MS", "Comic Sans";
+}
+
+.nav-link {
+  transition-duration: 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--blue-links) !important;
+}
+
+.nav-link.active {
+  color: var(--blue-links) !important;
+}
