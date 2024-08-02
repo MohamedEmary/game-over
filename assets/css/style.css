@@ -29,7 +29,8 @@ nav {
 }
 
 .card,
-nav {
+nav,
+.game-details {
   font-family: cursive, "Comic Sans MS", "Comic Sans";
 }
 
@@ -51,6 +52,10 @@ nav {
 
 .card .card-footer > * {
   font-size: 13px;
+}
+
+.blue-bg {
+  background-color: #0cc9f0;
 }
 
 /* Custom Scroll Bar */
