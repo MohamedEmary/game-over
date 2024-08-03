@@ -58,6 +58,10 @@ nav,
   background-color: #0cc9f0;
 }
 
+.card {
+  cursor: pointer;
+}
+
 /* Custom Scroll Bar */
 
 /* width */
