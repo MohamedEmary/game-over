@@ -49,11 +49,9 @@ export default class GamesSection {
         document.querySelector(".nav-link.active").classList.remove("active");
         item.classList.add("active");
 
-        this.getCategoryGames(item.textContent).then((res) => {
-          this.UI.displayCategoryGames(res);
-        });
-
-        this.addClickEvent();
+        let res = this.getCategoryGames(item.textContent)
+          .then((res) => this.UI.displayCategoryGames(res))
+          .then(() => this.addClickEvent());
       });
     });
   }
