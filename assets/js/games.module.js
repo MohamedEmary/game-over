@@ -24,10 +24,12 @@ export default class GamesSection {
   }
 
   async getCategoryGames(category) {
+    this.showSpinner();
     return this.fetchFromAPI(`games?category=${category}`);
   }
 
   async getGameDetails(id) {
+    this.showSpinner();
     return this.fetchFromAPI(`game?id=${id}`);
   }
 
@@ -54,5 +56,9 @@ export default class GamesSection {
           .then(() => this.addClickEvent());
       });
     });
+  }
+
+  showSpinner() {
+    document.getElementById("spinner-container").classList.remove("d-none");
   }
 }

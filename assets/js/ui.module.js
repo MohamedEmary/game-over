@@ -1,7 +1,6 @@
 export default class UI {
   displayCategoryGames(categoryGames) {
-    const cardContainer = document.getElementById("card-container");
-    cardContainer.innerHTML = "";
+    let containerHTML = "";
     for (const game of categoryGames) {
       const card = `
       <div class="col">
@@ -30,8 +29,10 @@ export default class UI {
         </div>
       </div>
         `;
-      cardContainer.innerHTML += card;
+      containerHTML += card;
     }
+    this.hideSpinner();
+    document.getElementById("card-container").innerHTML = containerHTML;
   }
 
   displayGameDetails(game) {
@@ -84,6 +85,8 @@ export default class UI {
     </div>
     `;
 
+    this.hideSpinner();
+
     detailsSec.innerHTML = gameDetails;
     const body = document.querySelector("body");
     body.style.overflow = "hidden";
@@ -95,5 +98,9 @@ export default class UI {
       detailsSecParent.classList.add("d-none");
       body.style.overflow = "initial";
     });
+  }
+
+  hideSpinner() {
+    document.getElementById("spinner-container").classList.add("d-none");
   }
 }
